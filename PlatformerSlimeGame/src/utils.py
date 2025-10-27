@@ -7,6 +7,7 @@ def load_image(path: str, scale: int = 1):
     img = pygame.image.load(IMG_PATH + path).convert()
     img = pygame.transform.scale(img, (img.get_width()/scale, img.get_height()/scale))
     
+    img.set_colorkey((0, 0, 0))
     return img
 
 
