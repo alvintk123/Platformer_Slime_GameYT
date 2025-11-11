@@ -19,8 +19,26 @@ class MapEditor:
         
         # --------------------- load image ----------------
         self.assets = {
-            'stone': load_images('sprites/environment/tiles/stone', 1),
-            'large_decor': load_images('sprites/environment/decorations/large_decor', 1),
+            # Tile Map
+            'ground': load_images('sprites/environment/tiles/ground'),
+            
+            # items
+            'fruits': load_images('sprites/environment/items/fruits'),
+            'coins': load_images('sprites/environment/items/coins'),
+            'potions': load_images('sprites/environment/items/potions'),
+            
+            # Decorations
+            'grass': load_images('sprites/environment/decorations/grass'),
+            'large_decor': load_images('sprites/environment/decorations/large_decor'),
+            'mushrooms': load_images('sprites/environment/decorations/mushrooms'),
+            'sign': load_images('sprites/environment/decorations/sign'),
+            'trees': load_images('sprites/environment/decorations/trees'),
+
+            # interactives
+            'boxes': load_images('sprites/environment/interactives/boxes'),
+            'crates': load_images('sprites/environment/interactives/crates'),
+            'ladders': load_images('sprites/environment/interactives/ladders'),
+            'platforms': load_images('sprites/environment/interactives/platforms'),
         }
         
         self.tileAssetsList = list(self.assets)

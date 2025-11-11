@@ -18,10 +18,10 @@ class LevelMap:
         self.offTileMap = []
         self.tileMap = {}
         for i in range(5):
-            self.tileMap[str(i) + ';10'] = {'type': 'stone', 'count': 1, 'pos': (i, 10)}
-            self.tileMap['10;' + str(i)] = {'type': 'stone', 'count': 1, 'pos': (10, i)}
+            self.tileMap[str(i) + ';10'] = {'type': 'ground', 'count': 1, 'pos': (i, 10)}
+            self.tileMap['10;' + str(i)] = {'type': 'ground', 'count': 1, 'pos': (10, i)}
             
-        # self.tileMap['5;10'] = {'type': 'stone', 'count': 1, 'pos': (5, 10)}
+        # self.tileMap['5;10'] = {'type': 'ground', 'count': 1, 'pos': (5, 10)}
     
     def saveTileMap(self, pathName: str) -> None:
         with open(BASE_DIR_LEVEL + pathName, "w") as file:
