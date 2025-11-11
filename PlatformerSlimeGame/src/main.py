@@ -51,7 +51,7 @@ class Game:
                     pygame.quit()
                     sys.exit()
             
-            self.screen.blit(pygame.transform.scale(self.display, (self.screen.get_width(), self.screen.get_width())), (0, 0))
+            self.screen.blit(pygame.transform.scale(self.display, (self.screen.get_width(), self.screen.get_height())), (0, 0))
             
             pygame.display.update()
             self.clock.tick(FPS)

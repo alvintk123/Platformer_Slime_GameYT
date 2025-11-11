@@ -1,3 +1,4 @@
+from __future__ import annotations
 import pygame
 from utils import load_images
 
@@ -10,10 +11,10 @@ class Animation:
         self.frame = 0
         self.done  = False
 
-    def copy(self):
+    def copy(self) -> Animation:
         return Animation(self.imageList, self.imgDuration)
     
-    def update(self):
+    def update(self) -> None:
         if self.isAlive:
             self.frame = (self.frame + 1) % (self.lenImageList * self.imgDuration)
             print(self.frame)
@@ -22,6 +23,6 @@ class Animation:
             if (self.frame >= self.lenImageList*self.imgDuration - 1):
                 self.done = True
                 
-    def getImg(self):
+    def getImg(self) -> pygame.Surface:
         return self.imageList[int(self.frame/self.imgDuration)]
         

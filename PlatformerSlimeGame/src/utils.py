@@ -3,7 +3,7 @@ import os
 
 IMG_PATH = '../assets/'
 
-def load_image(path: str, scale: int = 1):
+def load_image(path: str, scale: int = 1) -> pygame.Surface:
     img = pygame.image.load(IMG_PATH + path).convert()
     img = pygame.transform.scale(img, (img.get_width()/scale, img.get_height()/scale))
     
@@ -11,7 +11,7 @@ def load_image(path: str, scale: int = 1):
     return img
 
 
-def load_images(path: str, scale: int = 1):
+def load_images(path: str, scale: int = 1) -> list[pygame.Surface]:
     images_list = []
     
     listDirImage = sorted(os.listdir(IMG_PATH+path))
