@@ -17,7 +17,6 @@ class Animation:
     def update(self) -> None:
         if self.isAlive:
             self.frame = (self.frame + 1) % (self.lenImageList * self.imgDuration)
-            print(self.frame)
         else:
             self.frame = min(self.frame+1, self.lenImageList*self.imgDuration - 1)
             if (self.frame >= self.lenImageList*self.imgDuration - 1):
